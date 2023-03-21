@@ -1,0 +1,34 @@
+.selectgame{
+    width: 30vmin;
+    height: 50px;
+}
+.selecttopup{
+    width: 30vmin;
+    height: 10vmin;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+.buttonlabel {
+    position: relative;
+}
+.buttoncont{
+    height: 20em;;
+}
+.totalharga{
+    width: 30em;
+}
+.buttonlabel span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.ID, .zone{
+    width: 30vmin;
+    height: 5vmin;
+    margin-right: 5vmin;
+    padding: 15px;
+}
+.zone{
+    width: 15vmin;
+}
