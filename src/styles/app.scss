@@ -51,7 +51,8 @@ a[href] {
 			margin-left: 20px;
 			margin-right: 20px;
 			text-decoration: none;
-			transition: opacity .3s;
+			
+			
 
 			&.active {
 				font-weight: 700;
@@ -68,6 +69,7 @@ a[href] {
 
 			&:hover {
 				opacity: .5;
+				color: #e68e1b;
 			}
 		}
 	}
@@ -99,14 +101,16 @@ section{
 		.title {
 			font-size: 48px;
 			margin-top: 0;
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 			font-weight:700;
 			
 		}
 
 		.description {
-			font-size: 22px;
-			line-height: 40px;
+			margin-top: 40px;
+			font-size: 18px;
+			line-height: 33px;
+			margin-right: 25vmin;
 		}
 
 		.cta {
@@ -131,43 +135,5 @@ section{
 	}
 }
 
-.portfolio-wrapper {
-	display: flex;
-	margin-left: -10px;
-	margin-right: -10px;
 
-	.portfolio-item {
-		width: 50%;
-		padding-left: 10px;
-		padding-right: 10px;
-		text-align: center;
-
-		.portfolio-image {
-			max-width: 100%;
-		}
-
-		.portfolio-name {
-			font-size: 24px;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			text-transform: capitalize;
-		}
-
-		.portfolio-category {
-			color: #999;
-		}
-	}
-}
-
-.contact-links {
-	padding: 0;
-	padding-left: 15px;
-	margin-top: -10px;
-	list-style: square;
-
-	.contact-item {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-}
 

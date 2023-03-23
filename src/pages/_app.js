@@ -1,5 +1,6 @@
 import '../styles/app.scss';
 import 'bootstrap/dist/css/bootstrap.css';
+
 import { SSRProvider } from 'react-bootstrap';
 
 

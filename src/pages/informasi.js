@@ -2,12 +2,16 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Head from 'next/head'
 import Navigationbar from '../components/Navbar';
+import Footer from '../components/footer';
+
+import Accordion from 'react-bootstrap/Accordion';
+
 
 function Informasi() {
 	return (
 		<>
 			<Head>
-			  <title>About</title>
+			  <title>Informasi</title>
 			</Head>
 
 			<Navigationbar/>
@@ -15,13 +19,56 @@ function Informasi() {
 			<section className="hero">
 			  <div className="container">
 			    <div className="text-wrapper w-full">
-			      <h1 className="title">About</h1>
-			      <p className="description">
-			      	Incididunt in cillum magna occaecat nisi qui in exercitation labore anim adipisicing amet irure tempor id pariatur nostrud labore nulla veniam sunt occaecat est officia ut cillum do eiusmod enim consequat nulla in ut esse irure ex commodo excepteur pariatur in consectetur consectetur in dolor aliqua ex sint minim dolore ut ea ad dolor est deserunt incididunt exercitation qui laboris ad do minim sunt elit occaecat excepteur deserunt sint sunt laboris dolore amet sit fugiat tempor reprehenderit laborum et irure commodo exercitation ea excepteur esse mollit ad nisi sit laboris dolore ad sunt eiusmod dolore do nisi id commodo in et aliqua sed ullamco ea id duis aliquip commodo qui sed aute ut aliqua.
-			      </p>
+			      <h1 className="title">FAQ</h1>
+			      <Accordion defaultActiveKey="0">
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Apa itu MASBRO.STORE?</Accordion.Header>
+                        <Accordion.Body>
+                        MASBRO.STORE adalah jasa penyedia layanan top up game yang terjangkau bagi semua kalangan gamers di Indonesia.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>Gimana sih caranya top up di MASBRO.STORE?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header>Gimana sih caranya top up di MASBRO.STORE?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header>Gimana sih caranya top up di MASBRO.STORE?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    </Accordion>
+
 		      </div>
 	      </div>
 			</section>
+            <Footer />
 		</>
 	);
 }

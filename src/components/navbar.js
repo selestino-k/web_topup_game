@@ -20,7 +20,7 @@ function Navigationbar() {
             <Nav.Link href="/topup">Games</Nav.Link>
             <Nav.Link href="/informasi">Informasi</Nav.Link>
             <NavDropdown title="Profil" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Tentang Kami</NavDropdown.Item>
+              <NavDropdown.Item href="/about">Tentang Kami</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
               </NavDropdown.Item>
@@ -38,7 +38,7 @@ function Navigationbar() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-warning">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
