@@ -42,8 +42,8 @@ import handleChange from '../components/input';
             type="radio"
             variant={'outline-warning'}
             name="radio"
-            value={radio.amount}
-            checked={radioValue === radio.amount}
+            value={radio.name}
+            checked={radioValue === radio.name}
             onChange={(e) => setRadioValue(e.currentTarget.value)}
 
           >
@@ -121,8 +121,8 @@ export function FreeFire() {
               type="radio"
               variant={'outline-danger'}
               name="radio"
-              value={radio.amount}
-              checked={radioValue === radio.amount}
+              value={radio.name}
+              checked={radioValue === radio.name}
               onChange={(e) => setRadioValue(e.currentTarget.value)}
             >
               <div className='buttonlabel'><span>
@@ -200,8 +200,8 @@ export function FreeFire() {
               type="radio"
               variant={'outline-primary'}
               name="radio"
-              value={radio.amount}
-              checked={radioValue === radio.amount}
+              value={radio.name}
+              checked={radioValue === radio.name}
               onChange={(e) => setRadioValue(e.currentTarget.value)}
             >
               <div className='buttonlabel'><span>

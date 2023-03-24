@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Head from 'next/head'
 import Navigationbar from '../components/Navbar';
+import Footer from '../components/footer';
 
 function Informasi() {
 	return (
@@ -22,6 +23,8 @@ function Informasi() {
 		      </div>
 	      </div>
 			</section>
+			<Footer />
+
 		</>
 	);
 }
