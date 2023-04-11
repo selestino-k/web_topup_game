@@ -12,6 +12,7 @@ export async function query({ query, values = [] }) {
   try {
     const [results] = await dbconnection.execute(query, values);
     dbconnection.end();
+    console.log('Connected to MySQL database!');
     return results;
   } catch (error) {
     return { error };
