@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
 import Head from 'next/head'
-import Navigationbar from '../components/Navbar';
 import Footer from '../components/footer';
+import Navigationbar from '@/components/navbar';
 
 function Informasi() {
 	return (
 		<>
+		<Navigationbar></Navigationbar>
 			<Head>
 			  <title>About</title>
 			</Head>
-
-			<Navigationbar/>
-
 			<section className="hero">
 			  <div className="container">
 			    <div className="text-wrapper w-full">
