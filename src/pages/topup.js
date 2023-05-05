@@ -1,16 +1,11 @@
 import Link from 'next/link';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-
 import Head from 'next/head'
 import styles from '../components/games.module.css'
-
 import {PUBGM,FreeFire,MLBB} from '../components/jumlahtopup'
-
-
 import { useEffect, useState } from 'react';
-import { Form } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
+
 
 
 
@@ -65,13 +60,10 @@ function Topup() {
 								<option value="higgs">Higgs Domino</option>
 							</select>
 						</div>			
-							
 								{PUBGMContentVisible&&<PUBGM/>}
 								{FFContentVisible&&<FreeFire/>}
 								{MLBBContentVisible&&<MLBB/>}
 								<br></br>
-							
-							
 					</div>
 	      		</div>
 			</section>

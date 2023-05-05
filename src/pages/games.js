@@ -27,7 +27,7 @@ function Informasi() {
 							Some quick example text to build on the card title and make up the
 							bulk of the card`s content.
 							</Card.Text>
-							<Button variant="warning">Top Up Sekarang</Button>
+							<Button variant="warning" href='/pubgm'>Top Up Sekarang</Button>
 						</Card.Body>
 					</Card>
 					<Card className='game-card' style={{ width: '18rem',marginTop:'10vmin' }}>
@@ -38,7 +38,7 @@ function Informasi() {
 							Some quick example text to build on the card title and make up the
 							bulk of the card`s content.
 							</Card.Text>
-							<Button variant="danger">Top Up Sekarang</Button>
+							<Button variant="danger" href='/freefire'>Top Up Sekarang</Button>
 						</Card.Body>
 					</Card>
 					<Card className='game-card' style={{ width: '18rem',marginTop:'10vmin' }}>
@@ -49,7 +49,7 @@ function Informasi() {
 							Some quick example text to build on the card title and make up the
 							bulk of the card`s content.
 							</Card.Text>
-							<Button variant="primary">Top Up Sekarang</Button>
+							<Button variant="primary" href='/mlbb'>Top Up Sekarang</Button>
 						</Card.Body>
 					</Card>
 					<Card className='game-card' style={{ width: '18rem',marginTop:'10vmin' }}>

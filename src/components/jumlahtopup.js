@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import handleChange from '../components/input';
 
- export function PUBGM() {
+export function PUBGM() {
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState('0');
   const radios = [
@@ -148,9 +148,6 @@ export function FreeFire() {
 						  </Card.Body>
 					  </Card>
 
-
-			
-					  
 					</div>
       </>
     );
@@ -226,9 +223,6 @@ export function FreeFire() {
                       <Button variant="primary">Beli</Button>
                     </Card.Body>
                   </Card>
-      
-      
-            
                   
                 </div>
       </>
