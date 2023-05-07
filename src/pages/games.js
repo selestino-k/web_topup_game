@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Footer from '../components/footer';
 import Navigationbar from '@/components/navbar';
 import { Card,Button, Container } from 'react-bootstrap';
+import "bulma/css/bulma.css";
+
 
 function Informasi() {
 	return (
@@ -12,10 +14,10 @@ function Informasi() {
 			  <title>About</title>
 			</Head>
 			<section className="hero">
-			  <div className="container">
-			    <div className="text-wrapper w-full">
-			      <h1 className="title">Games</h1>
-			      <p className="description">
+			  <div className="columns mt-2 is-centered">
+			    <div className="column is-full">
+			      <h1 className='title is-3'>Games</h1>
+			      <p>
 				  Berikut merupakan games yang didukung MASBRO.STORE
 			      </p>
 				  <Container className='card-container'>

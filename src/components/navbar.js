@@ -18,8 +18,6 @@ function Navigationbar() {
             navbarScroll
           >
           <Nav.Link href="/games">Games</Nav.Link>
-
-          <Nav.Link href="/topup">Top Up</Nav.Link>
             <Nav.Link href="/informasi">Informasi</Nav.Link>
             <NavDropdown title="Profil" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/about">Tentang Kami</NavDropdown.Item>
@@ -31,7 +29,6 @@ function Navigationbar() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-          
           </Nav>
           <Form className="d-flex">
             <Form.Control

@@ -4,6 +4,7 @@ import Navigationbar from '../components/navbar';
 import Footer from '../components/footer';
 import Image from 'next/image'
 import mypic from '../asset/logo_masbro_store-removebg-preview.png'
+import "bulma/css/bulma.css";
 
 
 
@@ -24,7 +25,7 @@ function Home() {
           <h1 className="title">MASBRO.store</h1>
           <p className="description">Mau top up game? Di sini aja masbro!</p>
 
-          <Link href="/topup" className="cta">Top Up Sekarang</Link>
+          <Link href="/games" className="cta">Top Up Sekarang</Link>
         </div>
         <div className='image-wrapper'>
         <Image

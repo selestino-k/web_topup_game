@@ -17,8 +17,6 @@ function Informasi() {
 
 	const [checked, setChecked] = useState(false);
   	const [radioValue, setRadioValue] = useState('0');
-	
-	
 
 	useEffect(() => {
         getGames();
@@ -39,7 +37,7 @@ function Informasi() {
 			  <title>About</title>
 			</Head>
 			<section className="hero">
-			  <div className="container">
+			  <Container>
 			    <div className="text-wrapper w-full">
 			      <h1 className="title">Free Fire</h1>
 			      <p className="description">
@@ -53,8 +51,6 @@ function Informasi() {
 					<input className={styles.ID} type="text" onChange={handleChange}></input>
 
 					</div>
-
-					
 						<p className="description">
 									Pilih Jumlah Diamonds (DM) yang akan ditop-up
 						</p>
@@ -98,7 +94,7 @@ function Informasi() {
 							</Card>
 
 					</div>
-	      </div>
+	      </Container>
 		  <br></br>
 			</section>
 
