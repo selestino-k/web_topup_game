@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Head from 'next/head'
 import Navigationbar from '@/components/navbar';
-import { Card,Button, Container } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
-import { Router, useRouter } from "next/router";
+import {useRouter } from "next/router";
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import styles from '../components/games.module.css'
 import axios from 'axios'
@@ -17,10 +16,9 @@ const PUBGM = ()=> {
 	const [games, setGames] = useState([]);
 	const [Email, setEmail] = useState('');
 	const [GameID,setGameID] = useState('');
-	const [Amount,setAmount] = useState('');
+	const [Amount] = useState('');
+	const [selectedAmount, setselectedAmount] = useState('');
 
-  	const [radioValue, setRadioValue] = useState('0');
-	
 	const router = useRouter()
 
 	useEffect(() => {
@@ -31,9 +29,9 @@ const PUBGM = ()=> {
         const response = await axios.get("http://localhost:5000/gamepubgm");
 		setGames(response.data);
     }
-	console.log(games);
+	
 	function handleSubmit() {
-        console.log("Selected value:", Amount);
+        console.log("Selected value:", selectedAmount);
         // Do something with the selected value, such as submitting it to a server
       }
 
@@ -43,7 +41,7 @@ const PUBGM = ()=> {
             await axios.post('http://localhost:5000/userorder',{
                 Email,
                 Amount,
-                GameID,
+                GameID
             });
             router.push("/ordersuccess");
         } catch (error){
@@ -59,10 +57,14 @@ const PUBGM = ()=> {
 			  <title>PUBGM Top UP</title>
 			</Head>
 			<section className="hero">
-			  <div className="columns mt-5 is-centered">
-					<div className="column is-half">
-						<h1 className="title">PUBG Mobile</h1>
-						<div className="column is-half">
+			  	<div className="columns is-centered ">
+						<div className="column is-4">
+						<h1 className="title is-3">PUBG Mobile</h1>
+							<figure className='image is-5by3'>
+								<img src="https://awsimages.detik.net.id/community/media/visual/2018/11/22/28a501b2-6ca7-42ed-a5c9-e0661a3a4e33_169.jpeg?w=700&q=90"></img>
+							</figure>
+						</div>
+						<div className="column mt-6 is-5 ml-6">
 							<form onSubmit={saveUserorder}>
 								<div className="field">
 									<label  className="label"> Email</label>
@@ -76,7 +78,7 @@ const PUBGM = ()=> {
 									</div>
 								</div>
 								<div className="field">
-								<label  className="label"> Game ID</label>
+								<label  className="label mt-5"> Game ID</label>
 									<div className="control">
 										<input type="text" 
 										className="input" 
@@ -86,21 +88,21 @@ const PUBGM = ()=> {
 										/>
 									</div>      
 								</div>          
-								<p className="description">
+								<p className="description mt-6">
 									Pilih Jumlah UC yang akan ditop-up
 								</p>
-								<div className={styles.buttoncont} >
-									{games.map((games, idx) => (
+								<div className='mt-5'>
+									{games.map((games,idx) => (
 										<ToggleButton
 											className={styles.selecttopup}
 											key={idx}
 											id={`radio-${idx}`}
 											type="radio"
 											variant={'outline-warning'}
-											name="radio"
+											name="options"
 											value={games.Amount}
-											checked={radioValue === games.Amount}
-											onChange={(e) => setRadioValue(e.currentTarget.value)}
+											checked={selectedAmount === games.Amount}
+											onChange={(e) => setselectedAmount(e.currentTarget.value)}
 										>
 											<div className='buttonlabel'>
 											<span>
@@ -111,15 +113,13 @@ const PUBGM = ()=> {
 										</ToggleButton>
 
 									))}
+									<div className="field mt-5">
+                    					<button type='submit' className="button is-link is-medium" onClick={handleSubmit}>Checkout</button>
+                					</div>
 								</div>
-								<div className="field">
-                    				<button type='submit' className="button is-link-medium" onClick={handleSubmit}>Save</button>
-                				</div>
-								
 							</form>
 						</div>
-					</div>
-		  		</div>
+				</div>
 			</section>
 		  <br></br>
 	</>
