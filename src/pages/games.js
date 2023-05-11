@@ -11,10 +11,10 @@ function Informasi() {
 		<>
 		<Navigationbar></Navigationbar>
 			<Head>
-			  <title>About</title>
+			  <title>Games - MASBRO.STORE</title>
 			</Head>
 			<section className="hero">
-			  <div className="columns mt-2 is-centered">
+			  <div className="column mt-2 is-centered">
 			    <div className="column is-full">
 			      <h1 className='title is-3'>Games</h1>
 			      <p>

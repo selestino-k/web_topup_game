@@ -17,7 +17,7 @@ const PUBGM = ()=> {
 	const [Email, setEmail] = useState('');
 	const [GameID,setGameID] = useState('');
 	const [Amount] = useState('');
-	const [selectedAmount, setselectedAmount] = useState('');
+	const [selectedAmount, setselectedAmount] = useState(null);
 
 	const router = useRouter()
 
@@ -30,31 +30,34 @@ const PUBGM = ()=> {
 		setGames(response.data);
     }
 	
-	function handleSubmit() {
-        console.log("Selected value:", selectedAmount);
-        // Do something with the selected value, such as submitting it to a server
-      }
+	
 
 	const saveUserorder = async (e) =>{
         e.preventDefault();
         try {
             await axios.post('http://localhost:5000/userorder',{
                 Email,
-                Amount,
-                GameID
+				GameID,
+                Amount : selectedAmount,
+				Game : "PUBGM"
             });
             router.push("/ordersuccess");
         } catch (error){
             console.log(error);
         }
     }
+
+	function handleSubmit() {
+        console.log("Selected value:", selectedAmount);
+      }
+
 	
 
 	return (
 		<>
 		<Navigationbar></Navigationbar>
 			<Head>
-			  <title>PUBGM Top UP</title>
+			  <title>PUBGM Top Up - MASBRO.STORE</title>
 			</Head>
 			<section className="hero">
 			  	<div className="columns is-centered ">
@@ -92,22 +95,22 @@ const PUBGM = ()=> {
 									Pilih Jumlah UC yang akan ditop-up
 								</p>
 								<div className='mt-5'>
-									{games.map((games,idx) => (
+									{games.map((game) => (
 										<ToggleButton
 											className={styles.selecttopup}
-											key={idx}
-											id={`radio-${idx}`}
+											key={game.id}
+											id={`option-${game.id}`}
 											type="radio"
 											variant={'outline-warning'}
 											name="options"
-											value={games.Amount}
-											checked={selectedAmount === games.Amount}
+											value={game.Amount}
+											checked={selectedAmount == game.Amount}
 											onChange={(e) => setselectedAmount(e.currentTarget.value)}
 										>
 											<div className='buttonlabel'>
 											<span>
-											{games.Amount}<br></br>
-											{games.Price}
+											{game.Amount}<br></br>
+											{game.Price}
 											</span> 
 											</div>  
 										</ToggleButton>

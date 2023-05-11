@@ -14,7 +14,7 @@ import "bulma/css/bulma.css";
 function Home() {
   return <>
     <Head>
-      <title>Home</title>
+      <title>MASBRO.STORE</title>
     </Head>
 
     <Navigationbar />
