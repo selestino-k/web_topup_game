@@ -13,12 +13,12 @@ function Navigationbar() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">
-        <Image
-        src="/masbrobanner.png"
-        width={180}
-        height={90}
-        alt="Picture of the author"
-      />
+            <Image
+            src="/masbrobanner.png"
+            width={180}
+            height={90}
+            alt="Picture of the author"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

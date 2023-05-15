@@ -63,7 +63,6 @@ function Games() {
 				</div>
 			</div>
 		</section>
-
 		</>
 	);
 }
