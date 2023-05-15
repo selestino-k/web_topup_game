@@ -15,10 +15,10 @@ function Informasi() {
 
 			<Navigationbar/>
 
-			<section className="hero">
-			  <div className="container">
+			<section>
+			  <div className="container mt-6 mb-6 is-centered">
 			    <div className="text-wrapper w-full">
-			      <h1 className="title">FAQ</h1>
+			      <h1 className="title is-2 ml-3">FAQ</h1>
 			      <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Apa itu MASBRO.STORE?</Accordion.Header>

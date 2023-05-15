@@ -7,10 +7,8 @@ import { faLocationDot,faEnvelope,faPhone } from '@fortawesome/free-solid-svg-ic
 
 export default function footer() {
   return (
-    <MDBFooter  className='text-center text-lg-start' style={{backgroundColor:'#36439f', padding:'2em', color:'white', height:'50vmin',}}>
-     
-
-      <section className=''style={{backgroundColor:'#36439f', padding:'2em', color:'white', height:'20vmin'}} >
+    <MDBFooter  className='text-center text-lg-start' style={{backgroundColor:'#36439f', padding:'2em', color:'white', height:'60%', position:'absolute',width:'100%'}}>
+      <section>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
             <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
@@ -22,16 +20,15 @@ export default function footer() {
                 MASBRO.STORE adalah jasa penyedia layanan top up game yang terjangkau bagi semua kalangan gamers di Indonesia.
               </p>
             </MDBCol>
-
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4 text-decoration-none'>Layanan</h6>
               <p>
-                <a href='/topup' className='text-reset text-decoration-none'>
+                <a href='/' className='text-reset text-decoration-none'>
                   Top Up Game
                 </a>
               </p>
               <p>
-                <a href='informasi' className='text-reset text-decoration-none'>
+                <a href='/informasi' className='text-reset text-decoration-none'>
                   Informasi
                 </a>
               </p>
@@ -41,12 +38,8 @@ export default function footer() {
                 </a>
               </p>
               <p>
-                
               </p>
             </MDBCol>
-
-            
-
             <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
@@ -58,13 +51,10 @@ export default function footer() {
               <p>
               <FontAwesomeIcon icon={faPhone} />    +62 852 5625 5208
               </p>
-              
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
-
-      
     </MDBFooter>
   );
 }

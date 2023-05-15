@@ -58,7 +58,8 @@ const Freefire = ()=> {
 			<Head>
 			  <title>MLBB Top Up - MASBRO.STORE</title>
 			</Head>
-			<section className="hero">
+			<section>
+			<div className='container mt-6'>
 			  	<div className="columns is-centered ">
 						<div className="column is-4">
 						<h1 className="title is-3">Mobile Legends: Bang Bang</h1>
@@ -134,6 +135,7 @@ const Freefire = ()=> {
 								</div>
 							</form>
 						</div>
+				</div>
 				</div>
 			</section>
 		  <br></br>

@@ -59,7 +59,8 @@ const PUBGM = ()=> {
 			<Head>
 			  <title>PUBGM Top Up - MASBRO.STORE</title>
 			</Head>
-			<section className="hero">
+			<section>
+			<div className='container mt-6'>
 			  	<div className="columns is-centered ">
 						<div className="column is-4">
 						<h1 className="title is-3">PUBG Mobile</h1>
@@ -123,6 +124,7 @@ const PUBGM = ()=> {
 							</form>
 						</div>
 				</div>
+			</div>
 			</section>
 		  <br></br>
 	</>

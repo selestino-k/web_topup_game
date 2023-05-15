@@ -1,14 +1,12 @@
 import Link from 'next/link';
 import Head from 'next/head'
 import Navigationbar from '../components/navbar';
+import Games from '../components/games';
 import Footer from '../components/footer';
 import Image from 'next/image'
 import mypic from '../asset/logo_masbro_store-removebg-preview.png'
 import "bulma/css/bulma.css";
-
-
-
-
+import { Carousel } from 'react-bootstrap';
 
 
 function Home() {
@@ -18,30 +16,47 @@ function Home() {
     </Head>
 
     <Navigationbar />
-
-    <section className="hero">
-      <div className="container">
-        <div className="text-wrapper">
-          <h1 className="title">MASBRO.store</h1>
-          <p className="description">Mau top up game? Di sini aja masbro!</p>
-
-          <Link href="/games" className="cta">Top Up Sekarang</Link>
+    <section>
+      <div >
+            <Carousel interval={2500}>
+            <Carousel.Item>
+              <Image
+                src="/masbrostore.png"
+                width={2100}
+                height={900}
+                alt="Masbro Store"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image
+              src="/ffprice.png"
+              width={2100}
+              height={900}
+              alt="FF Price List"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image
+              src="/mlbbprice.png"
+              width={2100}
+              height={900}
+              alt="MLBB Pricelist"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image
+              src="/helpbanner.png"
+              width={2100}
+              height={900}
+              alt="Help"
+              />
+            </Carousel.Item>
+          </Carousel>
         </div>
-        <div className='image-wrapper'>
-        <Image
-          src={mypic}
-          alt="Masbro.store"
-          width="350px"
-          height="300px"
-          layout="responsive" 
-        />
-        </div>
-
-        
-      </div>
-    </section>
-    <Footer />
-
+      </section>
+  
+    <Games></Games>
+    <Footer></Footer>
   </>;
 }
 
