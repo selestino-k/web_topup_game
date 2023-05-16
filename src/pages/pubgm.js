@@ -8,15 +8,10 @@ import styles from '../components/games.module.css'
 import axios from 'axios'
 import "bulma/css/bulma.css";
 
-
-
-
-
 const PUBGM = ()=> {
 	const [games, setGames] = useState([]);
 	const [Email, setEmail] = useState('');
 	const [GameID,setGameID] = useState('');
-	const [Amount] = useState('');
 	const [selectedAmount, setselectedAmount] = useState(null);
 
 	const router = useRouter()
@@ -26,16 +21,14 @@ const PUBGM = ()=> {
     }, []);
 
 	const getGames = async () => {
-        const response = await axios.get("http://localhost:5000/gamepubgm");
+        const response = await axios.get("https://rich-teal-turkey-veil.cyclic.app/gamepubgm");
 		setGames(response.data);
     }
 	
-	
-
 	const saveUserorder = async (e) =>{
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/userorder',{
+            await axios.post('https://rich-teal-turkey-veil.cyclic.app/userorder',{
                 Email,
 				GameID,
                 Amount : selectedAmount,
@@ -50,8 +43,6 @@ const PUBGM = ()=> {
 	function handleSubmit() {
         console.log("Selected value:", selectedAmount);
       }
-
-	
 
 	return (
 		<>
