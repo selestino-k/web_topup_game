@@ -28,7 +28,7 @@ const PUBGM = ()=> {
 	const saveUserorder = async (e) =>{
         e.preventDefault();
         try {
-            await axios.post('https://rich-teal-turkey-veil.cyclic.app/userorder',{
+            await axios.post("https://rich-teal-turkey-veil.cyclic.app/userorder",{
                 Email,
 				GameID,
                 Amount : selectedAmount,

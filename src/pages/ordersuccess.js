@@ -16,6 +16,7 @@ function Informasi() {
 						<h1 className="title is-1 is-spaced">Order Success</h1>
 						<p className="subtitle is-4">
 							Terima kasih telah memesan top up game di MASBRO.STORE
+							
 						</p>
 					</div>
 	      		</div>
