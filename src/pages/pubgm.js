@@ -4,6 +4,7 @@ import Navigationbar from '@/components/navbar';
 import React, { useState, useEffect } from 'react';
 import {useRouter } from "next/router";
 import ToggleButton from 'react-bootstrap/ToggleButton';
+import { Card } from 'react-bootstrap';
 import styles from '../components/games.module.css'
 import axios from 'axios'
 import "bulma/css/bulma.css";
@@ -106,8 +107,11 @@ const PUBGM = ()=> {
 											</span> 
 											</div>  
 										</ToggleButton>
+										
 
 									))}
+									
+
 									<div className="field mt-5">
                     					<button type='submit' className="button is-link is-medium" onClick={handleSubmit}>Checkout</button>
                 					</div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Navbar from './navbar';
+import Footer from './footer';
 import Head from 'next/head'
 import styles from '../components/games.module.css'
 import {PUBGM,FreeFire,MLBB} from '../components/jumlahtopup'
@@ -11,26 +11,26 @@ import { useEffect, useState } from 'react';
 
 
 
-function Topup() {
-	const [game,selectgame] = useState("game")
+function Payment() {
+	const [payment,selectPayment] = useState("payment")
 
 	const[PUBGMContentVisible,setPUBGMContentVisible] = useState(false);
 	const[FFContentVisible,setFFContentVisible] = useState(false);
 	const[MLBBContentVisible,setMLBBContentVisible] = useState(false);
 
 	useEffect(() => {
-		game === "pubgm" ? setPUBGMContentVisible(true):setPUBGMContentVisible(false);
-		game === "freefire" ? setFFContentVisible(true):setFFContentVisible(false);
-		game === "mlbb" ? setMLBBContentVisible(true):setMLBBContentVisible(false);
+		payment === "pubgm" ? setPUBGMContentVisible(true):setPUBGMContentVisible(false);
+		payment === "freefire" ? setFFContentVisible(true):setFFContentVisible(false);
+		payment === "mlbb" ? setMLBBContentVisible(true):setMLBBContentVisible(false);
 
 	});
 	
 	const handleOnchange = (e) =>{
-		selectgame(e.target.value)
+		selectPayment(e.target.value)
 	}
 	const renderresult = () =>{
 		let result;
-		game ==="game";
+		payment ==="payment";
 		return result;
 	}
 	return (
@@ -49,7 +49,7 @@ function Topup() {
 								Silahkan pilih game anda yang ingin di topup
 							</p>
 						<div className="">
-							<select  className={styles.selectgame} id="game" value={game} onChange={handleOnchange}>
+							<select  className={styles.selectgame} id="game" value={payment} onChange={handleOnchange}>
 								<option value="" >Pilih Game</option>
 
 								<option value="pubgm">PUBG Mobile</option>
@@ -77,4 +77,4 @@ function Topup() {
 	);
 }
 
-export default Topup;
+export default Payment;
